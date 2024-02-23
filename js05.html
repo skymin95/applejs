@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 이벤트리스너</title>
+</head>
+<body>
+  
+  <h2>예제 - 버튼 1누르면 아이디 입력하세요 창</h2>
+  <h2>예제 - 버튼 2누르면 비밀번호 입력하세요 창</h2>
+
+  <pre>
+    1번방법
+    p id="id" style="display: none; padding: 20px; color: #fff; background-color: cadetblue;">아이디를 입력하세요/p
+
+    p id="pw" style="display: none; padding: 20px; color: #fff; background-color:cornflowerblue">비밀번호를 입력하세요/p
+
+    button onclick="idBtn('block')">버튼1/button
+    button onclick="pwBtn('block')">버튼2/button
+
+    script
+      function idBtn(){
+        document.getElementById('id').style.display = '';
+      }
+
+      function pwBtn(){
+        document.getElementById('pw').style.display = '';
+      }
+
+    /script
+
+  </pre>
+
+
+  <p id="id" style="display: none; padding: 20px; color: #fff; background-color: cadetblue;">아이디를 입력하세요</p>
+
+  <p id="pw" style="display: none; padding: 20px; color: #fff; background-color:cornflowerblue">비밀번호를 입력하세요</p>
+
+  <button onclick="idBtn('block')">버튼1</button>
+  <button onclick="pwBtn('block')">버튼2</button>
+
+  <script>
+    function idBtn(){
+      document.getElementById('id').style.display = '';
+    }
+
+    function pwBtn(){
+      document.getElementById('pw').style.display = '';
+    }
+
+
+  </script>
+
+
+
+
+
+
+  <pre>
+
+    2번방법
+      p id="info" style="display: none; padding: 20px; color: #fff; background-color: cadetblue;">아이디를 입력하세요/p
+
+      button onclick="info('block')">버튼1/button
+      button onclick="pwBtn1('block')">버튼2/button
+
+    script
+      function info(){
+        document.getElementById('info').style.display = '';
+        document.getElementById('info').innerHTML = "아이디를 입력하세요";
+      }
+
+      function pwBtn1(){
+        document.getElementById('info').style.display = ''
+        document.getElementById('info').innerHTML = "비밀번호를 입력하세요";
+      }
+    /script
+
+  </pre>
+
+  <p id="info" style="display: none; padding: 20px; color: #fff; background-color: cadetblue;">아이디를 입력하세요</p>
+
+  <button onclick="info('block')">버튼1</button>
+  <button onclick="pwBtn1('block')">버튼2</button>
+
+  <script>
+    function info(){
+      document.getElementById('info').style.display = '';
+      document.getElementById('info').innerHTML = "아이디를 입력하세요";
+    }
+
+    function pwBtn1(){
+      document.getElementById('info').style.display = ''
+      document.getElementById('info').innerHTML = "비밀번호를 입력하세요";
+    }
+
+
+  </script>
+
+
+
+  <pre>
+
+
+  <h2>파라미터 써서 함수 한개로 압축해보기 - 오류 매개변수 선언을 안함;;</h2>
+  p id="press" style="display: none; padding: 20px; color: #fff; background-color: cadetblue;">아이디를 입력하세요/p
+
+  button onclick="press('block' , '아이디')">버튼1/button
+  button onclick="press('none' , '비밀번호')">버튼2/button
+
+  script
+    function press(){
+      document.getElementById('press').style.display = '';
+      document.getElementById('press').innerHTML = '';
+    }
+
+
+  /script
+
+  </pre>
+
+  <h2>파라미터 써서 함수 한개로 압축해보기 - 완료</h2>
+  <p id="press" style="display: none; padding: 20px; color: #fff; background-color: cadetblue;">아이디를 입력하세요</p>
+
+  <button onclick="press('block' , '아이디')">버튼1</button>
+  <button onclick="press('block' , '비밀번호')">버튼2</button>
+
+  <script>
+    function press(a , b){
+      document.getElementById('press').style.display = a;
+      document.getElementById('press').innerHTML = b;
+    }
+
+
+  </script>
+
+<h2>클래스네임</h2>
+<p class="cname">클래스 네임</p>
+
+<script>
+  function cName(){
+    document.getElementsByClassName('cname')[0].innerHTML = '';
+  };
+
+
+</script>
+
+<hr>
+
+
+<h2>addEventListener</h2>
+<p id="event" style="display: none; padding: 20px; color: #fff; background-color: cadetblue;">이벤트</p>
+
+<p>addEventListener() 파라미터 2개 입력해야함<br>
+  .addEventListener('click', function(){ })<br>
+
+  click 부분을 다양하게 변경가능 scroll,mouseover, 종류는 검색<br>
+
+  콜백함수 - 파라미터 안에 함수가 있으면 콜백함수 순차적으로 실행하기 위해 콜백함수를 사용
+  
+</p>
+
+<button id="eventBtn">버튼1</button>
+
+<script>
+  document.getElementById('eventBtn').addEventListener('click', function(){
+    document.getElementById('event').style.display = 'block'
+  });
+</script>
+
+
+</body>
+</html>

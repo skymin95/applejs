@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동적 UI 만드는 스텝 (Alert 박스 만들기)</title>
+  <link rel="stylesheet" href="./css/js02.css">
+</head>
+<body>
+  <div class="alert-box" id="alert">알림창임</div>
+
+  <pre>
+    오류-1 ("block"; - "",''떄문에 실행이 안됨 )
+    
+    button onclick="document.getElementById('alert').style.display = "block";">버튼 button
+
+    해결 - 
+    button onclick="document.getElementById('alert').style.display = 'block';">버튼 button
+
+  </pre>
+
+  <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button>
+  
+  <button onclick="document.getElementById('alert').style.display = 'none';">닫기</button>
+
+  <h2>예제 - 닫기버튼 만들기</h2>
+  <p id="answer" style="display: none; ">정답 : 
+    button onclick="document.getElementById('alert').style.display = 'none';">닫기/button
+  </p>
+
+  <button onclick="document.getElementById('answer').style.display = 'block';">정답버튼</button>
+
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>function의 파라미터 문법</title>
+</head>
+<body>
+  <h2>function의 파라미터 문법</h2>
+  <pre>
+    구명 = 파라미터
+    function 알림창열기(구멍){
+      document.getElementById('alert').style.display = 구멍;
+    }
+    
+    알림창열기('안녕');
+    알림창열기('바보');
+  </pre>
+
+  <p id="answer" style="display: none; "> 정답버튼 내용 </p>
+  <button onclick="answerBtn('block')">정답버튼</button>
+
+  <h2>예제 - 버튼 1누르면 아이디 입력하세요 창</h2>
+  <h2>예제 - 버튼 2누르면 비밀번호 입력하세요 창</h2>
+
+  <p id="id" style="display: none; padding: 20px; color: #fff; background-color: cadetblue;">아이디를 입력하세요</p>
+
+  <p id="pw" style="display: none; padding: 20px; color: #fff; background-color:cornflowerblue">비밀번호를 입력하세요</p>
+
+  <button onclick="idBtn('block')">버튼1</button>
+  <button onclick="pwBtn('block')">버튼2</button>
+
+
+
+  <script>
+    function answerBtn(){
+      document.getElementById('answer').style.display = '';
+    }
+
+    function idBtn(){
+      document.getElementById('id').style.display = '';
+    }
+
+    function pwBtn(){
+      document.getElementById('pw').style.display = '';
+    }
+
+
+  </script>
+
+
+</body>
+</html>

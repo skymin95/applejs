@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 기초</title>
+</head>
+<body>
+  <h1 id="hello">안녕하세요</h1>
+  <h1 id="hi">고수</h1>
+  <p>.getElementById() 같은걸 셀렉터(웹 문서안에 있는 원하는 요소를 찾는 문법)라고 부름 </p>
+
+  <h2>예제-김민석 글씨 폰트 사이즈 16으로 줄이기</h2>
+
+  <h2 id="name">김민석</h2>
+
+  <p>정답: document.getElementById("name").style.fontSize = "16px";</p>
+
+  <script>
+    document.getElementById('hello').innerHTML = "안녕";
+
+    document.getElementById("hi").innerHTML = "고수에요";
+
+
+
+    //예제
+    document.getElementById("name").style.fontSize = "16px";
+
+  </script>
+</body>
+</html>
